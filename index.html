@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+    <title>Mspl4soa by akramkammoun</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Mspl4soa</h1>
+        <h2></h2>
+        <a href="https://github.com/MSPL4SOA/MSPL4SOA-tool" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        
+          <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p> The MSPL4SOA is a tool that combines the Multiple Sofware Product Line (MSPL) with the Service Oriented Architecture (SOA) paradigms. The goal of the tool is to design an MSPL that includes two dependent SPLs, named SPL<SUB>SP</SUB> and  SPL<SUB>SC</SUB>, for respectively the Service Providers (SPs) and Service Consumers (SCs). These SPLs are used to generate valid and consistent SPs and SCs. 
+The MSPL4SOA tool (see Figure 1) is mainly based on the Java EE technologies and the FAMILIAR tool (https://github.com/FAMILIAR-project/familiar-documentation). 
+FAMILIAR is a recent tool which implements many composition (e.g., the merge by intersection) and decomposition (e.g., the slice operator) operators that can be applied to edit FMs. Our tool is composed of two generators allowing to generate customized, valid and consistent SPs and SCs, namely: `spgenerator` and `scgenerator`.</p>
+
+<figure>
+<img src="./images/tool_site.png" alt="tool_site" />
+<figcaption><b>Figure 1: </b> Snapshots of our tool MSPL4SOA</figcaption>
+</figure>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Feature Models of the Service Provider and Service Consumer</h3>
+
+<p>We propose to integrate in our tool practical FM<SUB>SP</SUB> and FM<SUB>SC</SUB> to handle the variability of SPL<SUB>SP</SUB> and SPL<SUB>SC</SUB>.
+These two FMs are respectively illustrated in the following figures.
+A technical report about the features of these FMs can be downloaded
+from <a href="https://drive.google.com/open?id=0B9gkIT4fZIlZV1VzdFYwMEZJVm8">here</a> (2OO Ko).</p>
+
+<figure>
+<img src="./images/fm_sp.png" alt="fm_sp" />
+<figcaption><b>Figure 2: </b>Feature model FM<SUB>SP</SUB></figcaption>
+</figure>
+
+
+<figure>
+<img src="./images/fm_sc.png" alt="fm_sc" />
+<figcaption><b>Figure 3: </b>Feature model FM<SUB>SC</SUB></figcaption>
+</figure>
+
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h3>
+
+<p>
+We provide <a href="https://drive.google.com/open?id=0B9gkIT4fZIlZLWtDU2V1bTlNRW8">here</a> a pre-configured Eclipse version (http://www.jboss.org/products/devstudio/overview/) named JbdevStudio9.0 (996 Mo) that includes all the required technologies and configurations for our tool, such:</p>
+<ul>
+<li>The ESB Switchyard2 (http://switchyard.jboss.org), that contains: HornetQ JMS (MOM implementation), Apache Camel, RestEasy, Apache CXF, ... .</li>
+<li>The server JBoss Enterprise Application Platform (EAP) 6.4 (http://www.jboss.org/products/eap/overview).</li>
+</ul>
+The `spgenerator` can be downloaded from <a href="https://drive.google.com/open?id=0B9gkIT4fZIlZY1hEakNHS2pocFk">here</a> (161 Mo) and the `scgenerator` can be downloaded from <a href="https://drive.google.com/open?id=0B9gkIT4fZIlZWmt3by12U3NSWFE">here</a> (151 Mo).
+In order to configure your Maven with our tool, please download the <a href="./files/settings.xml">settings.xml file</a> and copy it in the root of your m2 dir.
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h3>
+
+<p>We provide in the following two videos that explain how our tool MSPL4SOA works. The first video presents the functionalities of the SP generator.
+The second video discusses the functionalities of the SC generator</p>
+     
+
+<div class="row columns">
+<div class="large-6 columns" >
+<iframe  width="95%" height="425" src="https://www.youtube.com/embed/IvZQEKfGLSg" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="large-6 columns" >
+<iframe  width="95%" height="425" src="https://www.youtube.com/embed/xmCYOrxXBXk" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<h3>
+<a id="service-provider-generator" class="anchor" href="#service-provider-generator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Service provider generator</h3>
+
+<p>
+The SP generator, named `spgenerator`, is an implementation of the FM<SUB>SC</SUB> and thus responsible to generate customized SPs which are based on the
+Switchyard 2 ESB.
+The Switchyard 2 is a recent free software ESB developed by the Redhat company.
+It adopts in its implementation the Service Component Architecture (SCA) that provides a technology-neutral assembly capability allowing
+the composition of services which are developed using different technologies, such as: JMS (HornetQ), SOAP, REST and Apache Camel. 
+These technologies have been integrated, on demand, in the generated SPs.
+The SCA also separates the development of the services from that of the communication technologies.
+The generated SPs can be deployed and executed in the server JBoss Enterprise Application Platform (EAP).
+We also integrate the FAMILIAR tool (https://github.com/FAMILIAR-project/familiar-documentation) in the SP generator to implement our update operator
+and to perform some other operations to edit FMs.
+</p>
+
+
+<h3>
+<a id="service-consumer-generator" class="anchor" href="#service-consumer-generator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Service consumer generator</h3>
+
+<p>
+The SC generator, named `scgenerator`, consists of an implementation of the SPL<SUB>SC</SUB> that allows to generate customized
+SCs as standalone Java programs that invoke the capabilities offered by a generated SP.
+For this purpose, two main steps are required by the developer.
+In the first step, the SC developer gives to the SC generator as an input
+the host name of the SP (e.g., http://localhost:8080/sp_manager). 
+The SC generator will then download, from this SP, the files fm_sc_update.fml. 
+This file will be used to configure the SC generator by generating files like input and output classes of the SP capabilities.
+In the second step, the SC developer derives one or many am_sc_update.fml (i.e., AM<SUB>SC<SUB>update</SUB></SUB>)
+from fm_sc_update.fml.
+Each AM<SUB>SC<SUB>update</SUB></SUB> regroups the required features to invoke a certain capability.
+Afterwards, the SC generator will use the Apache Velocity tool to transform the fm_sc_update.fml,
+defined with the FAMILIAR language, to the source code of the required SC.
+For each fm_sc_update.fml, the generator generates a source code based on our Java API, 
+that we propose in the following Figure.</p>
+
+
+
+<pre class="prettyprint">
+SCGenerator scGenerator = new SCGenerator("./files/sp_manager/fm_sc_update.fml");
+try {
+	scGenerator.setAmFilePath("./files/sp_manager/am/am_sc_update.fml");
+	scGenerator.start(); 
+	// If the response handler feature in your am_sc_update.fml is asynchronous, then, the code here is executed in parallel with the capability invocation.
+	scGenerator.stop(); 
+} catch (SCGeneratorException e) { 
+}
+T result = (T) scGenerator.getResponse(); 
+String state = scGenerator.getState(); 
+</pre>
+
+<p>
+The API is composed of, but not limited to, seven principle instructions that are required to execute an am_sc_update.fml. 
+The first instruction (line 1) creates an instance of the class SCGenerator
+which takes as input  the path of the file fm_sc_update.fml.
+The second instruction (line 3) sets the path of the file am_sc_update.fml.
+The third instruction (line 4) executes the am_sc_update.fml, 
+i.e., it maps the features of am_sc_update.fml with the artifacts of SC.
+The fourth instruction (line 6) allows to stop the execution of am_sc_update.fml and release the resources (e.g., closing the MOM connections).
+The SC developer can integrate some source codes between the third and fourth instructions (line 5). This code will be 
+executed in parallel with the capability invocation only if the feature Response handler
+presented in the am_sc_update.fml is asynchronous (see Figure 3).
+The fifth instruction (line 7) permits to handle the exceptions thrown in case of error in the execution of am_sc_update.fml
+(e.g., problem in the SP or am_sc_update.fml is not consistent with fm_sc_update.fml).
+The sixth and seventh instructions (lines 9 and 10) retrieve respectively the response and the state data (if any) of the capability. 
+The letter T in line 11 will be replaced, by the SC generator, with the type of the response object.
+</p>
+
+<p>
+Many advantages can be identified when using our API.
+It permits to use the same few lines of code to execute a given
+am_sc_update.fml independently of its features (e.g., SOAP, REST and MOM) and hides their implementation complexities. 
+Hence, the SC developer does not require 
+to work directly with the low level APIs of these features. 
+Our API is designed to map the features of am_sc_update.fml with the artifacts of SC at runtime.
+This can be useful, as an instance, to reconfigure the SC at runtime in order to adapt to the SP changes.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<ul>
+<li>Akram KAMOUN (akram.kamoun@redcad.org)</li>
+<li>Mohamed HADJ KACEM (mohamed.hadjkacem@isimsf.rnu.tn)</li>
+<li>Mathieur Acher (mathieu.acher@inria.fr)</li>
+<li>Ahmed HADJ KACEM (ahmed.hadjkacem@fsegs.rnu.tn)</li>
+<li>Khalil DRIRA (khalil@laas.fr)</li>
+</ul>
+
+
+   
+      </div>
+    </div>
+
+  
+  </body>
+</html>
